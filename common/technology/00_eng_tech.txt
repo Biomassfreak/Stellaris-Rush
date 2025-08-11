@@ -1,0 +1,304 @@
+# ##################
+# Corvette upgrades
+# ##################
+
+tech_corvette_build_speed = {
+	cost = @tier1cost2
+	area = engineering
+	tier = 1
+	category = { voidcraft }
+	prerequisites = { "tech_corvettes" }
+	weight = @tier1weight2
+
+	potential = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		custom_tooltip = tech_corvette_build_speed_effect
+		ship_corvette_cost_mult = -0.05
+		shipsize_corvette_build_speed_mult = 1
+		shipsize_offspring_corvette_build_speed_mult = 1
+		shipsize_frigate_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+	}
+
+	ai_weight = {
+
+	}
+
+	technology_swap = {
+		name = tech_small_space_fauna_build_speed
+		inherit_icon = no
+		inherit_effects = no
+
+		trigger = {
+			is_beastmasters_empire = yes
+		}
+
+		modifier = {
+			small_space_fauna_ship_cost_mult = -0.05
+			small_space_fauna_build_speed_mult = 1
+		}
+	}
+}
+
+# ##################
+# Destroyer upgrades
+# ##################
+
+tech_destroyer_build_speed = {
+	cost = @tier2cost2
+	area = engineering
+	tier = 2
+	category = { voidcraft }
+	prerequisites = { "tech_destroyers" }
+	weight = @tier2weight2
+
+	potential = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		custom_tooltip = tech_destroyer_build_speed_effect
+		ship_destroyer_cost_mult = -0.05
+		shipsize_destroyer_build_speed_mult = 1
+		shipsize_offspring_destroyer_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+	}
+
+	ai_weight = {
+
+	}
+
+	technology_swap = {
+		name = tech_medium_space_fauna_build_speed
+		inherit_icon = no
+		inherit_effects = no
+
+		trigger = {
+			is_beastmasters_empire = yes
+		}
+
+		modifier = {
+			medium_space_fauna_ship_cost_mult = -0.05
+			medium_space_fauna_build_speed_mult = 1
+		}
+	}
+}
+
+# ##################
+# Cruiser upgrades
+# ##################
+
+tech_cruiser_build_speed = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_cruisers" }
+	weight = @tier3weight2
+
+	potential = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		custom_tooltip = tech_cruiser_build_speed_effect
+		ship_cruiser_cost_mult = -0.05
+		shipsize_cruiser_build_speed_mult = 1
+		shipsize_offspring_cruiser_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+	}
+
+	ai_weight = {
+
+	}
+
+	technology_swap = {
+		name = tech_large_space_fauna_build_speed
+		inherit_icon = no
+		inherit_effects = no
+
+		trigger = {
+			is_beastmasters_empire = yes
+		}
+
+		modifier = {
+			large_space_fauna_ship_cost_mult = -0.05
+			large_space_fauna_build_speed_mult = 1
+		}
+	}
+}
+
+# ##################
+# Battleship upgrades
+# ##################
+
+tech_battleship_build_speed = {
+	cost = @tier4cost2
+	area = engineering
+	tier = 4
+	category = { voidcraft }
+	prerequisites = { "tech_battleships" }
+	weight = @tier4weight2
+
+	potential = {
+		country_uses_bio_ships = no
+	}
+
+	modifier = {
+		custom_tooltip = tech_battleship_build_speed_effect
+		ship_battleship_cost_mult = -0.05
+		shipsize_battleship_build_speed_mult = 1
+		shipsize_offspring_battleship_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+	}
+
+	ai_weight = {
+
+	}
+
+	technology_swap = {
+		name = tech_extra_large_space_fauna_build_speed
+		inherit_icon = no
+		inherit_effects = no
+
+		trigger = {
+			is_beastmasters_empire = yes
+		}
+
+		modifier = {
+			extra_large_space_fauna_ship_cost_mult = -0.05
+			extra_large_space_fauna_build_speed_mult = 1
+		}
+	}
+}
+
+#Corps of Engineers
+tech_space_defense_station_improvement = {
+	cost = @tier3cost3
+	area = engineering
+	tier = 3
+	category = { voidcraft }
+	prerequisites = { "tech_starbase_4" "tech_modular_engineering" }
+	is_rare = yes
+	weight = @tier3weight3
+
+	modifier = {
+		starbase_upgrade_cost_mult = -0.15
+		starbase_upgrade_speed_mult = 1
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.25
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_voidcraft }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+			}
+		}
+		modifier = {
+			factor = 1.5
+			is_specialist_subject_type = { TYPE = bulwark }
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_space_defense_station_improvement
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+# ##################
+# Building Speed
+# ##################
+
+tech_assembly_pattern = {
+	cost = @tier1cost3
+	area = engineering
+	tier = 1
+	category = { industry }
+	weight = @tier1weight3
+
+	modifier = {
+		planet_building_build_speed_mult = 1
+	}
+
+	weight_modifier = {
+
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}
+
+tech_construction_templates = {
+	cost = @tier3cost2
+	area = engineering
+	tier = 3
+	is_rare = yes
+	category = { industry }
+	prerequisites = { "tech_assembly_pattern" }
+	weight = @tier3weight2
+
+	modifier = {
+		planet_building_build_speed_mult = 0.50
+		empire_size_districts_mult = -0.10
+		show_only_custom_tooltip = no
+		custom_tooltip = tech_construction_templates_effect
+	}
+
+	weight_modifier = {
+		factor = 0.5
+		modifier = {
+			factor = 0.5
+			NOR = {
+				has_trait_in_council = { TRAIT = leader_trait_expertise_industry }
+				has_trait_in_council = { TRAIT = leader_trait_curator }
+			}
+		}
+		inline_script = {
+			script = technologies/rare_technologies_weight_modifiers
+			TECHNOLOGY = tech_construction_templates
+		}
+		modifier = {
+			factor = 1.25
+			OR = {
+				has_ethic = ethic_militarist
+				has_ethic = ethic_fanatic_militarist
+			}
+		}
+	}
+
+	ai_weight = {
+
+	}
+}

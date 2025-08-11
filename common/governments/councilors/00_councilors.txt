@@ -1,0 +1,208 @@
+councilor_feudal_realm = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_feudal_realm
+	modifier = {
+		subjects_unity_produces_add = 5
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_functional_architecture = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_functional_architecture
+	modifier = {
+		planet_building_build_speed_mult = 0.1
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_meritocracy = {
+	leader_class = { commander scientist official }
+	is_leader_possible = {
+		OR = {
+			leader_class = commander
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+	civic = civic_meritocracy
+	modifier = {
+		species_leader_exp_gain = 0.1
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_parliamentary_system = {
+	leader_class = { official }
+	is_leader_possible = {
+		leader_class = official
+	}
+	civic = civic_parliamentary_system
+	modifier = {
+		council_agenda_progress_speed = 0.12
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_heroic_tales = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+			leader_class = commander
+			leader_class = official
+		}
+	}
+	civic = civic_heroic_tales
+	modifier = {
+		pop_government_ethic_attraction = 0.12
+		species_leader_exp_gain = 0.12
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_civic_guided_sapience = {
+	leader_class = { scientist official }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+	civic = civic_guided_sapience
+	modifier = {
+		category_biology_research_speed_mult = 2
+	}
+}
+
+councilor_naval_contractors = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	civic = civic_naval_contractors
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.04
+	}
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_civic_guided_sapience_corperate = {
+	leader_class = { scientist official }
+	is_leader_possible = {
+		OR = {
+			leader_class = scientist
+			leader_class = official
+		}
+	}
+	civic = civic_corporate_guided_sapience
+	modifier = {
+		category_biology_research_speed_mult = 2
+	}
+}
+
+################################
+## GESTALT
+################################
+
+councilor_gestalt_growth = {
+	leader_class = { official }
+	possible = {
+		is_gestalt = yes
+	}
+	is_leader_possible = {
+		leader_class = official
+	}
+	modifier = {
+		bonus_pop_growth_mult = 0.12
+		planet_pop_assembly_mult = 0.12
+	}
+	icon = "GFX_icon_councilor_ruler"
+	optional = { always = no }
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_gestalt_cognitive = {
+	leader_class = { scientist }
+	possible = {
+		is_gestalt = yes
+	}
+	is_leader_possible = {
+		leader_class = scientist
+	}
+	modifier = {
+		all_technology_research_speed = 1
+	}
+	icon = "GFX_icon_councilor_research"
+	optional = { always = no }
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+################################
+## SOVEREIGN CIVICS
+################################
+
+councilor_psionic_sovereign = {
+	leader_class = { commander official scientist }
+	is_leader_possible = {
+		has_psionic_leader_trait = yes
+	}
+	civic = civic_psionic_sovereign
+	custom_tooltip = "councilor_psionic_sovereign_custom_modifier_desc"
+	conditional_tooltip = "councilor_psionic_sovereign_conditional_tooltip"
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_galactic_sovereign = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	modifier = {
+		add_base_country_intel = 2.5
+		spy_network_daily_value_mult = 0.12
+	}
+	civic = civic_galactic_sovereign
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
+
+councilor_galactic_sovereign_megacorp = {
+	leader_class = { commander }
+	is_leader_possible = {
+		leader_class = commander
+	}
+	modifier = {
+		add_base_country_intel = 2.5
+		spy_network_daily_value_mult = 0.12
+	}
+	civic = civic_galactic_sovereign_megacorp
+	ai_hiring_weight = {
+		inline_script = councilor_leader_weights
+	}
+}
