@@ -1,0 +1,57 @@
+#################
+# Campaigns
+# shorter duration, cost energy
+#################
+
+@Edict1Cost = 20
+@Edict2Cost = 25
+@Edict3Cost = 30
+
+@EdictDuration = -1
+
+# Sets the cost for all campaigns with this variable
+@campaignCost = 15
+@hiveFood = 15
+@campaignDuration = -1
+
+living_metal_construction = {
+	length = @EdictDuration
+	icon = "GFX_edict_type_time"
+	resources = {
+		category = rare_edicts
+		cost = {
+			sr_living_metal = 0.5
+			multiplier = value:edict_size_effect
+		}
+		cost = {
+			trigger = {
+				has_modifier = living_metal_mega_construction_insight
+			}
+			sr_living_metal = -0.25
+			multiplier = value:edict_size_effect
+		}
+		upkeep = {
+			sr_living_metal = 0.5
+			multiplier = value:edict_size_effect
+		}
+	}
+
+	modifier = {
+		megastructure_build_speed_mult = 0.50
+	}
+
+	potential = {
+		has_resource = { type = sr_living_metal amount > 0 }
+	}
+
+	ai_weight = {
+		weight = 0
+		modifier = {
+			weight = @EdictHighPrio
+			count_owned_megastructure = {
+				count >= 1
+				limit = { is_upgrading = yes }
+			}
+		}
+	}
+}
