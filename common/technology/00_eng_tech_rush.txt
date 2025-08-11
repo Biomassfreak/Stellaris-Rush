@@ -64,8 +64,8 @@ tech_destroyer_build_speed = {
 	modifier = {
 		custom_tooltip = tech_destroyer_build_speed_effect
 		ship_destroyer_cost_mult = -0.05
-		shipsize_destroyer_build_speed_mult = 0.25
-		shipsize_offspring_destroyer_build_speed_mult = 0.25
+		shipsize_destroyer_build_speed_mult = 1
+		shipsize_offspring_destroyer_build_speed_mult = 1
 	}
 
 	weight_modifier = {
@@ -86,7 +86,7 @@ tech_destroyer_build_speed = {
 
 		modifier = {
 			medium_space_fauna_ship_cost_mult = -0.05
-			medium_space_fauna_build_speed_mult = 0.25
+			medium_space_fauna_build_speed_mult = 1
 		}
 	}
 }
@@ -110,8 +110,8 @@ tech_cruiser_build_speed = {
 	modifier = {
 		custom_tooltip = tech_cruiser_build_speed_effect
 		ship_cruiser_cost_mult = -0.05
-		shipsize_cruiser_build_speed_mult = 0.25
-		shipsize_offspring_cruiser_build_speed_mult = 0.25
+		shipsize_cruiser_build_speed_mult = 1
+		shipsize_offspring_cruiser_build_speed_mult = 1
 	}
 
 	weight_modifier = {
@@ -132,7 +132,7 @@ tech_cruiser_build_speed = {
 
 		modifier = {
 			large_space_fauna_ship_cost_mult = -0.05
-			large_space_fauna_build_speed_mult = 0.25
+			large_space_fauna_build_speed_mult = 1
 		}
 	}
 }
@@ -156,8 +156,8 @@ tech_battleship_build_speed = {
 	modifier = {
 		custom_tooltip = tech_battleship_build_speed_effect
 		ship_battleship_cost_mult = -0.05
-		shipsize_battleship_build_speed_mult = 0.25
-		shipsize_offspring_battleship_build_speed_mult = 0.25
+		shipsize_battleship_build_speed_mult = 1
+		shipsize_offspring_battleship_build_speed_mult = 1
 	}
 
 	weight_modifier = {
@@ -178,7 +178,7 @@ tech_battleship_build_speed = {
 
 		modifier = {
 			extra_large_space_fauna_ship_cost_mult = -0.05
-			extra_large_space_fauna_build_speed_mult = 0.25
+			extra_large_space_fauna_build_speed_mult = 1
 		}
 	}
 }
@@ -195,7 +195,7 @@ tech_space_defense_station_improvement = {
 
 	modifier = {
 		starbase_upgrade_cost_mult = -0.15
-		starbase_upgrade_speed_mult = 0.25
+		starbase_upgrade_speed_mult = 1
 	}
 
 	weight_modifier = {
