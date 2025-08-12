@@ -1,0 +1,5 @@
+# Relics
+@activation_cost = 3000
+@triumph_duration = 900
+@triumph_duration_short = 450
+@triumph_duration_veryshort = 225
