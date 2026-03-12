@@ -1,0 +1,9 @@
+@lClusterTime = @rush_5min
+@gaiaTime = @rush_15min
+@barrenTimeShort = @rush_5min
+@barrenTimeLong = @rush_10min
+@nukedTime = @rush_15min
+@barrenTimeExtreme = @rush_30min
+@machineTime = @rush_30min
+@hiveTime = @rush_30min
+@highestTime = @rush_30min
