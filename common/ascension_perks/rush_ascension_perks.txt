@@ -1,0 +1,68 @@
+#################
+# GENERIC ASCENSION PERKS
+#################
+
+ap_executive_vigor = {
+	modifier = {
+		country_edict_fund_add = 100
+		council_agenda_progress_speed = @rush_4x
+		add_attunement_the_instrument_of_desire = @ascension_perk_attunement1
+	}
+
+	potential = {
+		NOT = {
+			has_ascension_perk = ap_executive_vigor
+		}
+	}
+
+	ai_weight = {
+		factor = 30 #it's better than average
+	}
+}
+
+#################
+# UTOPIA ASCENSION PERKS
+#################
+ap_master_builders = {
+	possible = {
+		custom_tooltip = {
+			fail_text = "requires_ascension_perks_2"
+			num_ascension_perks > 1
+		}
+		custom_tooltip = {
+			fail_text = "requires_mega_engineering"
+			has_technology = tech_mega_engineering
+		}
+	}
+	modifier = {
+		megastructure_build_speed_mult = @rush_4x
+		country_megastructure_build_cap_add = 1
+	}
+
+	potential = {
+		host_has_dlc = "Utopia"
+		NOT = {
+			has_ascension_perk = ap_master_builders
+		}
+	}
+
+	ai_weight = {
+		factor = 10
+		modifier = {
+			factor = 0.5
+			has_galactic_wonders = no
+		}
+		modifier = {
+			factor = 2
+			has_ethic = ethic_pacifist
+		}
+		modifier = {
+			factor = 3
+			has_ethic = ethic_fanatic_pacifist
+		}
+		modifier = {
+			factor = 2
+			has_galactic_wonders = yes
+		}
+	}
+}

@@ -24,6 +24,6 @@ tech_repeatable_reduced_building_time = {
 	}
 
 	modifier = {
-		planet_building_build_speed_mult = 2
+		planet_building_build_speed_mult = @rush_2x
 	}
 }
