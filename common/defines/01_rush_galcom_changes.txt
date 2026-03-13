@@ -1,9 +1,7 @@
 NGameplay = {
-
     RESOLUTION_VOTE_TIMER = @rush_10min				# number of days a resolution will be on the senate floor before being passed/failed
     RESOLUTION_VOTE_PREMATURE_TIMER = @rush_5min	# number of days until the custodian/emperor can prematurely end the senate session
     SENATE_RECESS_TIMER = @rush_5min				# number of days until the next proposed resolution will be put on the floor after the current vote
-    COUNCIL_DIPLOMACY_WEIGHT_MODIFIER = 1.5			# how much a countries diplomatic weight will be increased when voting if on the council
     CHANGE_VOTE_COOLDOWN = @rush_1min				# number of days after voting in a resolution before you can change your vote
 
     JUMP_DRIVE_COOLDOWN = @rush_5min				# Days between uses of Jump Drive
@@ -14,7 +12,6 @@ NGameplay = {
     CONSTRUCTION_SHIP_WORK_SPEED_MULT = @rush_4x	# Construction ship construction speed multiplier
     SCIENCE_SHIP_SURVEY_SPEED_MULT = @rush_2x		# Science ship survey speed multiplier
 
-    DEFAULT_COUNCIL_EMERGENCY_MEASURES = yes		# can the council by default propose emergency measures?
     CATEGORY_VOTE_COOLDOWN = @rush_10min			# time before another resolution in a given category can proposed again
     TYPE_VOTE_COOLDOWN = @rush_15min				# time before a referendum of a given type can be proposed again
     VETO_COOLDOWN = @rush_10min						# time before a country can enact another veto
@@ -27,25 +24,3 @@ NGameplay = {
     CUSTODIAN_TERM_LIMIT_DAYS = @rush_1hr			# The time period that a Custodian keeps their position
     CUSTODIAN_TERM_LIMIT_EXPIRATION_MESSAGE_DAYS = @rush_15min # The amount of days left on a term limit when a notification should be sent to the custodian about their term expiring
 }
-
-NPop = {
-
-    BASE_POP_GROWTH						= 4.0		# Base growth rate of pops
-    LOGISTIC_POP_GROWTH_R				= 0.0025	# Logistic Pop Growth Constant r
-    LOGISTIC_POP_GROWTH_FLOOR			= 0.1		# Logistic Pop Growth won't lower growth to less than this percent.
-    LOGISTIC_POP_GROWTH_MIN_POPS		= 10		# Treat small colonies as having this many pops to avoid the very bottom of the curve
-    LOGISTIC_POP_GROWTH_LOWER_THRESHOLD	= 0.0		# Ignore penalties to Pop Growth if the current number of pops of the species are below this percent of the carrying capacity
-    MAX_CARRYING_CAPACITY				= 50000		# Logistic Carrying Capacity Cap (so modders have access to this value in case they make a planet with infinite districts or something like that)
-    MAX_NEW_COLONIES_SCALE				= 2			# At this ratio of new to old colonies, no further scaling of migration
-    POP_BULK_UNIT_SIZE					= 100		# Default amount by which a pop group changes size in forced resettlement, effects like create_pop etc.
-    POP_GROUP_COLLAPSING_THRESHOLD		= 99		# Pop groups size for merging small groups together, that is 2x99 groups can become 1x198 group if partial key of species and category allows it.
-    COLONY_POPS_REQUIRED				= 100		# Number of pops at which planet colonization is completed.
-    COLONY_BOMBARDMENT_DAMAGE			= 15		# Damage to colonization pops from bombarding fleet. Multiplied by bombardment stance planet_damage
-
-    RECENTLY_CONQUERED_DAYS				= 720 # How long the recently conquered modifier stays on pops.
-}
-
-planet_building_build_speed_mult = 0.03
-planet_decision_enact_speed_mult = 0.03
-planet_decision_repeal_speed_mult = 0.03
-starbase_shipyard_build_speed_mult = 0.03

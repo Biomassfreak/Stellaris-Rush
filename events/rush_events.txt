@@ -1,0 +1,22 @@
+namespace = rush
+
+event = {
+	id = rush.1
+	hide_window = yes
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    immediate = {
+		every_country = {
+			limit = {
+				NOT = { has_global_flag = rush_event_fired }
+			}
+
+			add_modifier = {
+				modifier = rush_event_modifier
+				days = -1
+			}
+		}
+		set_global_flag = rush_event_fired
+    }
+} 

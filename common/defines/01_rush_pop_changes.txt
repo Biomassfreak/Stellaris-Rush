@@ -1,0 +1,16 @@
+NPop = {
+
+    BASE_POP_GROWTH						= 4.0		# Base growth rate of pops
+    LOGISTIC_POP_GROWTH_R				= 0.0025	# Logistic Pop Growth Constant r
+    LOGISTIC_POP_GROWTH_FLOOR			= 0.1		# Logistic Pop Growth won't lower growth to less than this percent.
+    LOGISTIC_POP_GROWTH_MIN_POPS		= 10		# Treat small colonies as having this many pops to avoid the very bottom of the curve
+    LOGISTIC_POP_GROWTH_LOWER_THRESHOLD	= 0.0		# Ignore penalties to Pop Growth if the current number of pops of the species are below this percent of the carrying capacity
+    MAX_CARRYING_CAPACITY				= 50000		# Logistic Carrying Capacity Cap (so modders have access to this value in case they make a planet with infinite districts or something like that)
+    MAX_NEW_COLONIES_SCALE				= 2			# At this ratio of new to old colonies, no further scaling of migration
+    POP_BULK_UNIT_SIZE					= 100		# Default amount by which a pop group changes size in forced resettlement, effects like create_pop etc.
+    POP_GROUP_COLLAPSING_THRESHOLD		= 99		# Pop groups size for merging small groups together, that is 2x99 groups can become 1x198 group if partial key of species and category allows it.
+    COLONY_POPS_REQUIRED				= 100		# Number of pops at which planet colonization is completed.
+    COLONY_BOMBARDMENT_DAMAGE			= 15		# Damage to colonization pops from bombarding fleet. Multiplied by bombardment stance planet_damage
+
+    RECENTLY_CONQUERED_DAYS				= 720 # How long the recently conquered modifier stays on pops.
+}

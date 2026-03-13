@@ -37,7 +37,7 @@ councilor_parliamentary_system = {
 	}
 	civic = civic_parliamentary_system
 	modifier = {
-		council_agenda_progress_speed = @rush_20p
+		council_agenda_progress_speed = @rush_120p
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -84,7 +84,7 @@ councilor_naval_contractors = {
 	}
 	civic = civic_naval_contractors
 	modifier = {
-		starbase_shipyard_build_speed_mult = @rush_1.5x
+		starbase_shipyard_build_speed_mult = @rush_150p
 	}
 	ai_hiring_weight = {
 		inline_script = councilor_leader_weights
@@ -119,7 +119,7 @@ councilor_gestalt_growth = {
 	}
 	modifier = {
 		bonus_pop_growth_mult = @rush_2x
-		planet_pop_assembly_mult = @rush_1.5x
+		planet_pop_assembly_mult = @rush_1_5x
 	}
 	icon = "GFX_icon_councilor_ruler"
 	optional = { always = no }

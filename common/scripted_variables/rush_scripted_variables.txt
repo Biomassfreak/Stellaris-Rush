@@ -1,10 +1,3 @@
-# Relics
-@activation_cost = 3000
-@triumph_duration = 900
-@triumph_duration_short = 450
-@triumph_duration_veryshort = 225
-@EdictDuration = 360
-
 @rush_5sec = 5
 @rush_10sec = 10
 @rush_15sec = 15
@@ -20,13 +13,14 @@
 @rush_45min = 2700
 @rush_1hr = 3600
 
-@rush_10p = 1.1
-@rush_20p = 1.2
-@rush_50p = 1.5
-@rush_100p = 2.0
-@rush_1.5x = 1.5
+@rush_110p = 1.1
+@rush_120p = 1.2
+@rush_150p = 1.5
+@rush_200p = 2.0
+@rush_1_5x = 1.5
 @rush_2x = 2.0
 @rush_3x = 3.0
 @rush_4x = 4.0
 @rush_5x = 5.0
 @rush_10x = 10.0
+@rush_100x = 100.0
