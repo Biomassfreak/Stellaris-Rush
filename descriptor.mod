@@ -6,4 +6,4 @@ tags={
 	"Gameplay"
 }
 name="Stellaris Rush"
-supported_version="v4.0.21"
+supported_version="v4.2.4"
