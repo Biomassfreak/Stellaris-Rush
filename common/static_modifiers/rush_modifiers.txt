@@ -1,9 +1,8 @@
-namespace = rush
+# Construction and survey speeds
 rush_event_modifier = {
-	icon = "gfx/interface/icons/resources/minor_artifacts.dds"
-	# Construction and survey speeds
-	planet_building_build_speed_mult = @rush_100x
-	starbase_shipyard_build_speed_mult = @rush_100x
-	planet_army_build_speed_mult = @rush_100x
-	planet_pop_assembly_mult = @rush_100x
+	icon = "gfx/interface/icons/modifiers/mod_rush_modifier.dds"
+	planet_building_build_speed_mult = 10.0
+	starbase_shipyard_build_speed_mult = 10.0
+	planet_army_build_speed_mult = 10.0
+	planet_pop_assembly_mult = 10.0
 }
