@@ -1,8 +1,34 @@
 # Construction and survey speeds
 rush_event_modifier = {
 	icon = "gfx/interface/icons/modifiers/mod_rush_modifier.dds"
-	planet_building_build_speed_mult = 10.0
-	starbase_shipyard_build_speed_mult = 10.0
+	
+	# Council
+	council_agenda_progress_speed = 10.0
+
+	# Planet modifiers
 	planet_army_build_speed_mult = 10.0
+	planet_building_build_speed_mult = 10.0
+	planet_clear_blocker_speed_mult = 10.0
+	planet_colony_development_speed_mult = 10.0
+	planet_decision_enact_speed_mult = 10.0
 	planet_pop_assembly_mult = 10.0
+	
+	# Terraforming modifiers
+	terraform_speed_mult = 10.0 
+
+	# Pops
+	pop_ethics_shift_speed_mult = 10.0
+
+	# Ship modifiers
+	ship_speed_mult = 10.0
+	ship_archaeological_site_excavation_speed_mult = 10.0
+	
+	# Starbase modifiers
+	starbase_building_build_speed_mult = 10.0
+	starbase_module_build_speed_mult = 10.0
+	starbase_shipyard_build_speed_mult = 10.0
+	starbase_upgrade_speed_mult = 10.0
+
+	# Megastructure modifiers
+	megastructure_build_speed_mult = 10.0
 }

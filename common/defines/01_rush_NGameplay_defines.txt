@@ -1,0 +1,220 @@
+NGameplay = {
+
+    ##############################
+    ### SLIDERS AND GAME START ###
+    ##############################
+	# These values control the mid and end game sliders in game setup
+	MID_GAME_START_DEFAULT = 100
+	MID_GAME_START_MAX = 400
+	MID_GAME_START_MIN = 25
+	END_GAME_START_DEFAULT = 200
+	END_GAME_START_MAX = 800
+	END_GAME_START_MIN = 50
+	START_YEAR_SLIDER_INTERVAL = 25
+	VICTORY_YEAR_DEFAULT = 300
+	VICTORY_YEAR_MAX = 1050
+	VICTORY_YEAR_MIN = 100
+	VICTORY_YEAR_SLIDER_INTERVAL = 50
+
+    TECH_COST_DEFAULT = 1.0
+    TECH_COST_MIN = 0.25
+    TECH_COST_MAX = 5.00
+    TECH_COST_SLIDER_INTERVAL = 0.25
+
+    TECH_COST_DIFFICULTY_SCALE_MULT = 0.025
+
+    TRADITION_COST_DEFAULT = 1.0
+    TRADITION_COST_MIN = 0.25
+    TRADITION_COST_MAX = 5.00
+    TRADITION_COST_SLIDER_INTERVAL = 0.25
+
+    #######################
+    ### GALAXY SPAWNING ###
+    #######################
+    CUSTOM_EMPIRE_SPAWN_CHANCE			= 50	# Chance that an empire will be created from an existing template instead of randomly generated (10 = 1% chance)
+    FALLEN_CUSTOM_EMPIRE_SPAWN_CHANCE	= 50	# Chance that a fallen empire will be created from an existing template instead of randomly generated (10 = 1% chance), if allowed in that fallen empire script
+    FALLEN_EMPIRE_OUTER_BOUNDARY		= 100	# Outer boundary of galaxy that fallen empire generation will try to avoid
+    FALLEN_EMPIRE_INNER_BOUNDARY		= 0		# Inner boundary of galaxy that fallen empire generation will try to avoid
+
+    ##################
+    ### POP GROWTH ###
+    ##################
+    # Base value for normal pop growth logistic ceiling, which controls how much the growth speed slows down as a pop grows larger. Higher values will result in faster growth for larger pops.
+    LOGISTIC_CEILING_DEFAULT = 5
+    LOGISTIC_CEILING_MIN = 1
+    LOGISTIC_CEILING_MAX = 10
+    LOGISTIC_CEILING_SLIDER_INTERVAL = 0.5
+
+    GROWTH_SCALE_DEFAULT = 0.25
+    GROWTH_SCALE_MIN = 0.0
+    GROWTH_SCALE_MAX = 1.0
+    GROWTH_SCALE_SLIDER_INTERVAL = 0.05
+    GROWTH_SCALE_MAGNITUDE_OFFSET = 10000.0 # Compensate for pop size change
+
+    ################
+    #### GALCOM ####
+    ################
+    RESOLUTION_VOTE_TIMER = @rush_10min				# number of days a resolution will be on the senate floor before being passed/failed
+    RESOLUTION_VOTE_PREMATURE_TIMER = @rush_5min	# number of days until the custodian/emperor can prematurely end the senate session
+    SENATE_RECESS_TIMER = @rush_5min				# number of days until the next proposed resolution will be put on the floor after the current vote
+    CHANGE_VOTE_COOLDOWN = @rush_1min				# number of days after voting in a resolution before you can change your vote
+    CATEGORY_VOTE_COOLDOWN = @rush_10min			# time before another resolution in a given category can proposed again
+    TYPE_VOTE_COOLDOWN = @rush_15min				# time before a referendum of a given type can be proposed again
+    VETO_COOLDOWN = @rush_10min						# time before a country can enact another veto
+    EMERGENCY_MEASURES_COOLDOWN = @rush_2min	    # time before a country can propose another emergency measure
+    DEFAULT_VETO_COST_MULT = 3						# proposed resolution cost is multiplied by this to determine the cost of vetoing that resolution
+    LEFT_COMMUNITY_MODIFIER_TIMER = @rush_10min		# how many days the left_community_modifier will affect the leaving country
+    COUNCIL_ELECTION_TIMER = @rush_30min			# time between galactic council elections
+    COUNCIL_ELECTION_SOON_CUTOFF = @rush_5min		# when there is less than this many days left until the next council we show an alert
+    COMMUNITY_FREEZE_RESOLUTION_MONTHS = @rush_5min	# The time period a resolution is frozen by the Custodian/Emperor
+    CUSTODIAN_TERM_LIMIT_DAYS = @rush_1hr			# The time period that a Custodian keeps their position
+    CUSTODIAN_TERM_LIMIT_EXPIRATION_MESSAGE_DAYS = @rush_15min # The amount of days left on a term limit when a notification should be sent to the custodian about their term expiring
+
+    #########################
+    ### EMPIRE MANAGEMENT ###
+    #########################
+    NEXT_ELECTION_MESSAGE_DAYS			= 180	# Days player can choose a new ruler from new election date
+    NEW_RULER_MESSAGE_DAYS				= 45	# Days player can see message of new ruler
+
+    POLICY_YEARS						= 10	# Years a set policy can not be changed for
+    SPECIES_POLICY_YEARS				= 10
+
+    DEBRIS_DAYS							= 1800	# How many days the debris is visible for
+    DEBRIS_RESEARCH_TIME				= 90	# How many days it takes to analyze 1 debris.
+
+    SPECIAL_PROJECT_BASE_PROGRESS		= 1	# i in the equation for special project time: x = (k * i) / (i + (y1 - z1) + (y2 - z2)... + (yn - zn))
+
+    MOVE_CAPITAL_INFLUENCE_COST				= 250	# Influence cost to move the empire capital to another planet.
+    MOVE_CAPITAL_COOLDOWN_YEARS			= 10	# Cooldown in years for moving capital.
+
+    ###############
+    ### ACTIONS ###
+    ###############
+    DIMENSIONAL_LOCK_BUILD_TIME = 180		# Time in days to build a Dimensional Lock
+    DIMENSIONAL_LOCK_EXPIRATION_TIME = 3600		# Time in days before a Dimensional Lock expires
+    DIMENSIONAL_LOCK_PRE_EXPIRATION_ALERT_DAYS = 30
+
+    JUMP_DRIVE_COOLDOWN = 200										# Days between uses of Jump Drive
+    ASTRAL_JUMP_COOLDOWN = 900										# Days between uses of Astral Jump
+    PHASE_FLEET_COOLDOWN = 360										# Days between uses of Phase Fleet
+    PHASE_FLEET_DURATION = 180
+    
+    JUMP_DRIVE_COOLDOWN = @rush_5min				# Days between uses of Jump Drive
+    ASTRAL_JUMP_COOLDOWN = @rush_10min				# Days between uses of Astral Jump
+    PHASE_FLEET_COOLDOWN = @rush_2min				# Days between uses of Phase Fleet
+    PHASE_FLEET_DURATION = @rush_1min
+    
+    ################################
+    ### SCIENCE AND CONSTRUCTION ###
+    ################################
+    CONSTRUCTION_SHIP_WORK_SPEED_MULT = @rush_4x	# Construction ship construction speed multiplier
+    SCIENCE_SHIP_SURVEY_SPEED_MULT = @rush_2x		# Science ship survey speed multiplier
+    SCIENCE_SHIP_SPECIAL_PROJECT_DIST	= 25.0	# Distance to be able to progress a special project
+    SCIENCE_SHIP_ASTRAL_RIFT_DIST		= 5.0	# Distance to be able to enter an Astral Rift
+
+    ###############
+    ### LEADERS ###
+    ###############
+    LEADER_POOL_REFRESH_TIME = 1800 		# Number of days between leader pool refresh
+    LEADER_EXPERIENCE_REQUIREMENT_BASE_VALUE					= 100 # Base value when calculating required experience for next skill level
+    LEADER_EXPERIENCE_REQUIREMENT_SCALE_VALUE					= 300 # Scale factor when calculating required experience for next skill level
+
+    ##################
+    ### FEDERATION ###
+    ##################
+
+    FEDERATION_PERK_EXPERATION_MONTHS	= 3		#Month for picked perk to expire if level lost
+    FEDERATION_BASE_ETHICS				= 3		# count of unique ethics not penalized for federation cohesion
+    FEDERATION_ENVOY_BASE_EFFECT		= 1.0	# envoys base effect on cohesion
+    FEDERATION_MEMBERS_PENALTY			= -0.25	# penalty for each federation member
+    FEDERATION_NO_MEMBERS_PENALTY		= -100.0	# penalty if the federation has no members
+    FEDERATION_ETHICS_PENALTY			= -0.15	# Federation cohesion penalty for extra unique ethics
+    FEDERATION_OPPOSING_ETHICS_PENALTY	= -0.5	# Federation cohesion for opposing ethics
+    FEDERATION_BASE_COHESION			= 5.0	# base federation cohesion
+    FEDERATION_COHESION_RANGE			= 100	# max cohesion range
+    FEDERATION_COHESION_TO_XP			= 0.1	# cohesion to xp conversion
+    FEDERATION_MAX_FLEET_SIZE			= 0
+    FEDERATION_JOIN_COHESION_PENALTY	= -100	# Cohesion loss every time a new member is added to the federation (after the first two)
+    FEDERATION_LEAVE_COHESION_PENALTY	= -100 # Cohesion loss every time a member leaves the federation
+    FEDERATION_SWITCH_COHESION_PENALTY	= -50	# Cohesion loss when you switch federation type
+    FEDERATION_VOTE_RESUBMIT_DELAY	= 180			# Number of days that must pass before you can propose to vote for a given law again
+
+    ##############
+    ### SPYING ###
+    ##############
+    SPY_NETWORK_LEVELS					= 50		# What is the base maximum spy network level? (spy_network_levels_add and relative encryption can increase this value)
+    SPY_NETWORK_MAX_LEVELS				= 100		# What is the absolute maximum spy network level?
+    SPY_NETWORK_ENCRYPTION_DECRYPTION_LEVELS_EFFECT = -10	# How much does each point of relative encryption difference modify the maximum network level?
+    SPY_NETWORK_ENCRYPTION_DECRYPTION_LEVELS_MIN = -50		# Lower bounds on the infiltration level modifier value
+    SPY_NETWORK_ENCRYPTION_DECRYPTION_LEVELS_MAX = 50		# Upper bounds on the infiltration level modifier value
+    SPY_NETWORK_MAX_POWER				= 100		# Including all modifiers, how powerful can a Spy Network ever be?
+    SPY_NETWORK_MAX_ENVOYS_COUNT		= 1			# How many envoys can be assigned to build a single spy network?
+    SPY_NETWORK_DAILY_ENVOY_SCORE		= 1.0		# How much progression do you get for each envoy
+    SPY_NETWORK_SPRAWL_SCORE_SCALE		= 400.0		# This many empire sprawl in the opposing empire adds 1 to daily spy network progression.
+    SPY_NETWORK_BASE_LEVEL_SCORE		= 5.0		# It takes (SPY_NETWORK_BASE_LEVEL_SCORE) + (Current Level * SPY_NETWORK_PER_LEVEL_SCORE) points to increase spy network level
+    SPY_NETWORK_PER_LEVEL_SCORE			= 5.0		# Per level portion of the above formula
+    SPY_NETWORK_MONTHLY_DECAY			= 1.0		# If we don't have an envoy assigned to a spy network or it's above the max value, it decays at this many levels per month
+    SPY_NETWORK_ENCRYPTION_DECRYPTION_BONUS_MULT = -0.10	#Encryption vs decryption bonus scale, multiplied with the difference between those values.
+    SPY_NETWORK_ENCRYPTION_DECRYPTION_BONUS_MIN = -0.4	# Lower bounds to encryption vs decryption (bad for attacker)
+    SPY_NETWORK_ENCRYPTION_DECRYPTION_BONUS_MAX = 0.4	# Upper bounds to encryption vs decryption (good for attacker)
+    SPY_NETWORK_MAXIMUM_ASSIGNED_ASSETS = 1			# Maximal number of assets that can be assigned to spy network
+    SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MULT = 1	# Difficulty modifier to be multiplied to the relative encryption
+    SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MIN = -4		# How low can excess Codebreaking drop the difficulty of operations? Negative numbers good for the spy.
+    SPY_NETWORK_RELATIVE_ENCRYPTION_DIFFICULTY_MAX = 4		# How high can excess Encryption increase the difficulty of operations? Positive numbers good for the defender.
+    SPY_NETWORK_RELATIVE_ENCRYPTION_MIN = -4	# Lower bounds for relative encryption
+    SPY_NETWORK_RELATIVE_ENCRYPTION_MAX = 4	# Upper bounds for relative encryption
+
+    ######################
+    ### WAR AND COMBAT ###
+    ######################
+    ENFORCE_STATUS_QUO_MONTHS				= 24
+
+    PLANET_HEALTH_MAX					= 100
+    PLANET_HEALTH_REGEN					= 0.05			# Each day
+    PLANET_HEALTH_REGEN_DELAY			= 60		# Days since being bombarded before repairs can be done at full speed
+
+    TRUCE_YEARS							= 10	# Truce last for X years
+    
+    FLEET_LEASE_DAYS_MAXIMUM = 36000	# A fleet can be leased for this number of days maximum
+    FLEET_LEASE_DAYS_DEFAULT = 3600		# A fleet can be leased for this number of days by default
+
+    ######################
+    ### EMPIRE OPINION ###
+    ######################
+    INSULT_COOLDOWN_DAYS				= 30	# How often can you send insults?
+    AUTO_DECLINE_DIPLOMACY_DAYS			= 180	# Number of days after which diplomatic action will automatically be declined
+
+    ENVOY_IMPROVE_RELATION_BASE			= 0.25	# Monthly effect on opinion when an envoy is improving relations
+    ENVOY_IMPROVE_RELATION_MAX			= 150.0	# Maximum value from using envoys to improve relations
+    ENVOY_HARM_RELATION_BASE			= -0.5	# Monthly effect on opinion when an envoy is harming relations
+    ENVOY_HARM_RELATION_MIN				= -150.0	# Lowest possible value from using envoys to harm relations
+    ENVOY_RELATION_EFFECT_DECAY			= 1.0	# Every month that there is no envoy effecting opinion it moves towards 0 with this/month
+
+    EMBASSY_IMPROVE_RELATION_MULTIPLIER = 3	# Multiplies ENVOY_IMPROVE_RELATION_BASE if you have established embassies
+
+    MIN_RIVAL_YEARS						= 10	# Years before you can remove an empire as a rival
+
+    ################
+    ### SUBJECTS ###
+    ################
+    AGREEMENT_CHANGE_COOLDOWN_MONTHS 			= 60	# How often an agreement can be changed in months
+    AGREEMENT_LOYALTY_DELTA_MULT				= 5		# Used in Influence Cost calculations
+    AGREEMENT_PROPOSE_INFLUENCE_COST 			= 50	# Base cost of agreement proposal. + |Loyalty Delta| * AGREEMENT_LOYALTY_DELTA_MULT between old and new agreements
+    AGREEMENT_DENY_AS_SUBJECT_INFLUENCE_COST	= 50	# + |Loyalty Delta| * AGREEMENT_LOYALTY_DELTA_MULT between old and new agreements
+    AGREEMENT_DENY_AS_OVERLORD_INFLUENCE_COST	= 25	# + |Loyalty Delta| * AGREEMENT_LOYALTY_DELTA_MULT between old and new agreements
+    AGREEMENT_EXPANSION_TITHE_FACTOR			= 0.5	# Factor applied on the total after modifiers are applied. 1.5 means 50% more cost which goes to the overlord
+
+    INTEGRATE_SUBJECT_MIN_DAYS				= 3600 # Amount of days the subject has been a subject before we can integrate it
+
+    ##############
+    ### SHROUD ###
+    ##############
+    MONTHLY_PATRON_ATTUNEMENT_VALUE_PER_ENVOY = 0.5
+    CALLING_COOLDOWN_REDUCTION_PER_ENVOY_DAYS = 0
+    CALLINGS_REFRESH_COOLDOWN_DAYS = 360
+
+    ##################
+    ### MISC/OTHER ###
+    ##################
+    EVENT_AUTOSELECT_MONTHS				= 9	# After these months an event option will be autoselected
+}

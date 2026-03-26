@@ -25,3 +25,8 @@ namespace = rush
 @rush_5x = 5.0
 @rush_10x = 10.0
 @rush_100x = 100.0
+
+@triumph_duration = 900
+@triumph_duration_short = 450
+@triumph_duration_veryshort = 225
+@EdictDuration = 360
