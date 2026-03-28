@@ -94,11 +94,6 @@ NGameplay = {
     DIMENSIONAL_LOCK_EXPIRATION_TIME = 3600		# Time in days before a Dimensional Lock expires
     DIMENSIONAL_LOCK_PRE_EXPIRATION_ALERT_DAYS = 30
 
-    JUMP_DRIVE_COOLDOWN = 200										# Days between uses of Jump Drive
-    ASTRAL_JUMP_COOLDOWN = 900										# Days between uses of Astral Jump
-    PHASE_FLEET_COOLDOWN = 360										# Days between uses of Phase Fleet
-    PHASE_FLEET_DURATION = 180
-    
     JUMP_DRIVE_COOLDOWN = @rush_5min				# Days between uses of Jump Drive
     ASTRAL_JUMP_COOLDOWN = @rush_10min				# Days between uses of Astral Jump
     PHASE_FLEET_COOLDOWN = @rush_2min				# Days between uses of Phase Fleet
