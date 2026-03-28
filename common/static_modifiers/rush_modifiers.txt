@@ -1,3 +1,18 @@
+# Modifier formula
+# ((x + (Sum of all add modifiers)) * (1 + (Sum of all mult modifiers))) * (1 - reduction)
+
+# Pop growth speed formula
+# pop_growth_speed_reduction = 0.5 would make a species grow half as fast. 
+# If a species on planet has a "base growth speed of 4", their final growth speed would be: 
+#1) 4 * (-1 * 0.5) = 2
+#2) 4 * -0.5 = 2
+
+# Planet build cost formula
+# planet_buildings_minerals_cost_mult = 1 would make all the buildings cost twice as much minerals. 
+# So a "Research Lab that normally costs 400" minerals would cost 
+#1) 400 * (1 + 1) = 800
+#2) 400 * 2 = 800 minerals.
+
 # Construction and survey speeds
 rush_event_modifier = {
 	icon = "gfx/interface/icons/modifiers/mod_rush_modifier.dds"
@@ -18,6 +33,11 @@ rush_event_modifier = {
 
 	# Pops
 	pop_ethics_shift_speed_mult = 10.0
+
+	# POP GROWTH
+	# logistic_growth_mult = 10.0
+	planet_pop_assembly_mult = 10.0
+	# bonus_pop_growth_mult = 10.0
 
 	# Ship modifiers
 	ship_speed_mult = 10.0

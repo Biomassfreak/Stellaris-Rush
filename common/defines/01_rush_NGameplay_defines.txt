@@ -40,16 +40,16 @@ NGameplay = {
     ### POP GROWTH ###
     ##################
     # Base value for normal pop growth logistic ceiling, which controls how much the growth speed slows down as a pop grows larger. Higher values will result in faster growth for larger pops.
-    LOGISTIC_CEILING_DEFAULT = 5
-    LOGISTIC_CEILING_MIN = 1
-    LOGISTIC_CEILING_MAX = 10
-    LOGISTIC_CEILING_SLIDER_INTERVAL = 0.5
+    # LOGISTIC_CEILING_DEFAULT = 5
+    # LOGISTIC_CEILING_MIN = 1
+    # LOGISTIC_CEILING_MAX = 10
+    # LOGISTIC_CEILING_SLIDER_INTERVAL = 0.5
 
-    GROWTH_SCALE_DEFAULT = 0.25
-    GROWTH_SCALE_MIN = 0.0
-    GROWTH_SCALE_MAX = 1.0
-    GROWTH_SCALE_SLIDER_INTERVAL = 0.05
-    GROWTH_SCALE_MAGNITUDE_OFFSET = 10000.0 # Compensate for pop size change
+    # GROWTH_SCALE_DEFAULT = 0.25
+    # GROWTH_SCALE_MIN = 0.0
+    # GROWTH_SCALE_MAX = 1.0
+    # GROWTH_SCALE_SLIDER_INTERVAL = 0.05
+    # GROWTH_SCALE_MAGNITUDE_OFFSET = 10000.0 # Compensate for pop size change
 
     ################
     #### GALCOM ####
@@ -217,4 +217,42 @@ NGameplay = {
     ### MISC/OTHER ###
     ##################
     EVENT_AUTOSELECT_MONTHS				= 9	# After these months an event option will be autoselected
+}
+
+# ======================================================================
+# POP GROWTH (LOGISTIC) REFERENCE
+# ======================================================================
+# Core shape used for logistic growth pressure:
+#   logistic_term = (1/400) * (P - (P * P / K) - 1)
+#
+# Where:
+#   P = species population on the planet (after minimum-pop handling)
+#   K = carrying capacity for that species/planet (capped by MAX_CARRYING_CAPACITY)
+#
+# Curve behavior:
+# - Very low P: low or slightly negative logistic pressure.
+# - Mid P (~K/2): strongest positive logistic pressure.
+# - High P (near K): growth pressure falls again.
+#
+# How NPop values affect this in practice:
+# - BASE_POP_GROWTH
+#   Flat base growth before/alongside logistic scaling. Increasing this raises growth at all colony sizes.
+#
+# - LOGISTIC_POP_GROWTH_R
+#   Strength/scaling of logistic response. Higher values make bonuses and penalties from the logistic curve stronger.
+#
+# - LOGISTIC_POP_GROWTH_FLOOR
+#   Minimum allowed fraction of growth after logistic penalties. Prevents growth from dropping below this share of normal growth.
+#
+# - LOGISTIC_POP_GROWTH_MIN_POPS
+#   Effective minimum P for curve evaluation. Small colonies are treated as at least this many pops, so they avoid the bottom of the curve.
+#
+# - LOGISTIC_POP_GROWTH_LOWER_THRESHOLD
+#   If species pop share is below this fraction of carrying capacity, low-pop logistic penalties are ignored.
+#
+# - MAX_CARRYING_CAPACITY
+#   Hard cap on K. Limits how far capacity-based scaling can go on extremely large worlds.
+# ======================================================================
+NPop = {
+    LOGISTIC_POP_GROWTH_R				= 0.025	# Logistic Pop Growth Constant r
 }
