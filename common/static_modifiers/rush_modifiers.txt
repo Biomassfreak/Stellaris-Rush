@@ -35,7 +35,7 @@ rush_event_modifier = {
 	pop_ethics_shift_speed_mult = 10.0
 
 	# POP GROWTH
-	# logistic_growth_mult = 10.0
+	logistic_growth_mult = 10.0
 	planet_pop_assembly_mult = 10.0
 	# bonus_pop_growth_mult = 10.0
 

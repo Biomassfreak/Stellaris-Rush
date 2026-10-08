@@ -1,3 +1,30 @@
+@rush_5days = 5
+@rush_10days = 10
+@rush_15days = 15
+@rush_1months = 30
+@rush_2months = 60
+@rush_3months = 90
+@rush_4months = 120
+@rush_6months = 180
+@rush_1yr = 360
+@rush_2yr = 720
+@rush_3yr = 1080
+@rush_4yr = 1440
+@rush_5yr = 1800
+@rush_10yr = 3600
+
+@rush_110p = 1.1
+@rush_120p = 1.2
+@rush_150p = 1.5
+@rush_200p = 2.0
+@rush_1_5x = 1.5
+@rush_2x = 2.0
+@rush_3x = 3.0
+@rush_4x = 4.0
+@rush_5x = 5.0
+@rush_10x = 10.0
+@rush_100x = 100.0
+
 NGameplay = {
 
     ##############################
@@ -54,21 +81,21 @@ NGameplay = {
     ################
     #### GALCOM ####
     ################
-    RESOLUTION_VOTE_TIMER = @rush_10min				# number of days a resolution will be on the senate floor before being passed/failed
-    RESOLUTION_VOTE_PREMATURE_TIMER = @rush_5min	# number of days until the custodian/emperor can prematurely end the senate session
-    SENATE_RECESS_TIMER = @rush_5min				# number of days until the next proposed resolution will be put on the floor after the current vote
-    CHANGE_VOTE_COOLDOWN = @rush_1min				# number of days after voting in a resolution before you can change your vote
-    CATEGORY_VOTE_COOLDOWN = @rush_10min			# time before another resolution in a given category can proposed again
-    TYPE_VOTE_COOLDOWN = @rush_15min				# time before a referendum of a given type can be proposed again
-    VETO_COOLDOWN = @rush_10min						# time before a country can enact another veto
-    EMERGENCY_MEASURES_COOLDOWN = @rush_2min	    # time before a country can propose another emergency measure
-    DEFAULT_VETO_COST_MULT = 3						# proposed resolution cost is multiplied by this to determine the cost of vetoing that resolution
-    LEFT_COMMUNITY_MODIFIER_TIMER = @rush_10min		# how many days the left_community_modifier will affect the leaving country
-    COUNCIL_ELECTION_TIMER = @rush_30min			# time between galactic council elections
-    COUNCIL_ELECTION_SOON_CUTOFF = @rush_5min		# when there is less than this many days left until the next council we show an alert
-    COMMUNITY_FREEZE_RESOLUTION_MONTHS = @rush_5min	# The time period a resolution is frozen by the Custodian/Emperor
-    CUSTODIAN_TERM_LIMIT_DAYS = @rush_1hr			# The time period that a Custodian keeps their position
-    CUSTODIAN_TERM_LIMIT_EXPIRATION_MESSAGE_DAYS = @rush_15min # The amount of days left on a term limit when a notification should be sent to the custodian about their term expiring
+    RESOLUTION_VOTE_TIMER = @rush_2months				        # number of days a resolution will be on the senate floor before being passed/failed
+    RESOLUTION_VOTE_PREMATURE_TIMER = @rush_1months	            # number of days until the custodian/emperor can prematurely end the senate session
+    SENATE_RECESS_TIMER = @rush_1months				            # number of days until the next proposed resolution will be put on the floor after the current vote
+    CHANGE_VOTE_COOLDOWN = @rush_10days				            # number of days after voting in a resolution before you can change your vote
+    CATEGORY_VOTE_COOLDOWN = @rush_3months			            # time before another resolution in a given category can proposed again
+    TYPE_VOTE_COOLDOWN = @rush_6months				            # time before a referendum of a given type can be proposed again
+    VETO_COOLDOWN = @rush_6months						        # time before a country can enact another veto
+    EMERGENCY_MEASURES_COOLDOWN = @rush_4months	                # time before a country can propose another emergency measure
+    DEFAULT_VETO_COST_MULT = 3						            # proposed resolution cost is multiplied by this to determine the cost of vetoing that resolution
+    LEFT_COMMUNITY_MODIFIER_TIMER = @rush_10min		            # how many days the left_community_modifier will affect the leaving country
+    COUNCIL_ELECTION_TIMER = @rush_4yr			                # time between galactic council elections
+    COUNCIL_ELECTION_SOON_CUTOFF = @rush_3yr		            # when there is less than this many days left until the next council we show an alert
+    COMMUNITY_FREEZE_RESOLUTION_MONTHS = @rush_1yr	            # The time period a resolution is frozen by the Custodian/Emperor
+    CUSTODIAN_TERM_LIMIT_DAYS = @rush_10yr			            # The time period that a Custodian keeps their position
+    CUSTODIAN_TERM_LIMIT_EXPIRATION_MESSAGE_DAYS = @rush_15min  # The amount of days left on a term limit when a notification should be sent to the custodian about their term expiring
 
     #########################
     ### EMPIRE MANAGEMENT ###
@@ -94,10 +121,10 @@ NGameplay = {
     DIMENSIONAL_LOCK_EXPIRATION_TIME = 3600		# Time in days before a Dimensional Lock expires
     DIMENSIONAL_LOCK_PRE_EXPIRATION_ALERT_DAYS = 30
 
-    JUMP_DRIVE_COOLDOWN = @rush_5min				# Days between uses of Jump Drive
-    ASTRAL_JUMP_COOLDOWN = @rush_10min				# Days between uses of Astral Jump
-    PHASE_FLEET_COOLDOWN = @rush_2min				# Days between uses of Phase Fleet
-    PHASE_FLEET_DURATION = @rush_1min
+    JUMP_DRIVE_COOLDOWN = @rush_1months				# Days between uses of Jump Drive
+    ASTRAL_JUMP_COOLDOWN = @rush_1months				# Days between uses of Astral Jump
+    PHASE_FLEET_COOLDOWN = @rush_6months				# Days between uses of Phase Fleet
+    PHASE_FLEET_DURATION = @rush_1months
     
     ################################
     ### SCIENCE AND CONSTRUCTION ###
@@ -249,5 +276,5 @@ NGameplay = {
 #   Hard cap on K. Limits how far capacity-based scaling can go on extremely large worlds.
 # ======================================================================
 NPop = {
-    LOGISTIC_POP_GROWTH_R				= 0.025	# Logistic Pop Growth Constant r
+    LOGISTIC_POP_GROWTH_R				= 0.25	# Logistic Pop Growth Constant r
 }
